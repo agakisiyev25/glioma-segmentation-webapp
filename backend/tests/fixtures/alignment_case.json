@@ -1,0 +1,483 @@
+{
+  "description": "Oblique, anisotropic affine with known label boxes. Voxel boxes are inclusive.",
+  "shape": [
+    40,
+    48,
+    36
+  ],
+  "spacing_mm": [
+    0.9,
+    1.2,
+    2.5
+  ],
+  "affine": [
+    [
+      0.8132333279799814,
+      -0.5100124559607702,
+      -0.1343180526140238,
+      -71.3
+    ],
+    [
+      0.3451970674298278,
+      1.0301824712144225,
+      -0.8510672194100253,
+      42.8
+    ],
+    [
+      0.17172809583889032,
+      0.34440001563212663,
+      2.346836860284,
+      -15.6
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "inverse_affine": [
+    [
+      1.0039917629382484,
+      0.42616921904917,
+      0.21200999486282757,
+      56.651926042052736
+    ],
+    [
+      -0.35417531663942364,
+      0.7154044938989045,
+      0.23916667752231022,
+      -52.141012245915974
+    ],
+    [
+      -0.021490888418243797,
+      -0.13617075510560406,
+      0.3754938976454401,
+      10.153512777567936
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "boxes": [
+    {
+      "label": 3,
+      "voxel_min": [
+        10,
+        20,
+        8
+      ],
+      "voxel_max": [
+        17,
+        29,
+        13
+      ]
+    },
+    {
+      "label": 2,
+      "voxel_min": [
+        22,
+        10,
+        20
+      ],
+      "voxel_max": [
+        30,
+        18,
+        27
+      ]
+    },
+    {
+      "label": 4,
+      "voxel_min": [
+        5,
+        34,
+        25
+      ],
+      "voxel_max": [
+        9,
+        40,
+        30
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "note": "label 3: central voxel",
+      "world_mm": [
+        -74.31144620545896,
+        63.50126899163365,
+        18.366434223916613
+      ],
+      "voxel": [
+        13,
+        24,
+        10
+      ],
+      "in_bounds": true,
+      "label": 3
+    },
+    {
+      "note": "label 3: lowest corner voxel centre",
+      "world_mm": [
+        -74.44246026032778,
+        60.04708234330652,
+        11.779976153303439
+      ],
+      "voxel": [
+        10,
+        20,
+        8
+      ],
+      "in_bounds": true,
+      "label": 3
+    },
+    {
+      "note": "label 3: highest corner voxel centre",
+      "world_mm": [
+        -74.01152933118496,
+        67.479767959195,
+        27.81585726628481
+      ],
+      "voxel": [
+        17,
+        29,
+        13
+      ],
+      "in_bounds": true,
+      "label": 3
+    },
+    {
+      "note": "label 3: off-centre inside the lowest corner voxel",
+      "world_mm": [
+        -73.96688916779709,
+        59.43266129402868,
+        12.649642129499744
+      ],
+      "voxel": [
+        10,
+        20,
+        8
+      ],
+      "in_bounds": true,
+      "label": 3
+    },
+    {
+      "note": "label 3: just inside the outer face",
+      "world_mm": [
+        -73.93552306245262,
+        67.71570850285039,
+        29.10419150357457
+      ],
+      "voxel": [
+        17,
+        29,
+        13
+      ],
+      "in_bounds": true,
+      "label": 3
+    },
+    {
+      "note": "label 3: just outside the outer face (background)",
+      "world_mm": [
+        -73.56425100079596,
+        67.6696263462814,
+        27.9103077189962
+      ],
+      "voxel": [
+        18,
+        29,
+        13
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "label 3: one voxel outside (background)",
+      "world_mm": [
+        -75.25569358830776,
+        59.70188527587669,
+        11.608248057464545
+      ],
+      "voxel": [
+        9,
+        20,
+        8
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "label 2: central voxel",
+      "world_mm": [
+        -60.38542306609381,
+        46.62313230374686,
+        47.66377849719292
+      ],
+      "voxel": [
+        26,
+        14,
+        23
+      ],
+      "in_bounds": true,
+      "label": 2
+    },
+    {
+      "note": "label 2: lowest corner voxel centre",
+      "world_mm": [
+        -61.19535239632859,
+        43.67481580739993,
+        38.55875547045685
+      ],
+      "voxel": [
+        22,
+        10,
+        20
+      ],
+      "in_bounds": true,
+      "label": 2
+    },
+    {
+      "note": "label 2: highest corner voxel centre",
+      "world_mm": [
+        -59.70981178847306,
+        48.72038158068375,
+        59.11563838421299
+      ],
+      "voxel": [
+        30,
+        18,
+        27
+      ],
+      "in_bounds": true,
+      "label": 2
+    },
+    {
+      "note": "label 2: off-centre inside the lowest corner voxel",
+      "world_mm": [
+        -60.719781303797895,
+        43.06039475812208,
+        39.42842144665316
+      ],
+      "voxel": [
+        22,
+        10,
+        20
+      ],
+      "in_bounds": true,
+      "label": 2
+    },
+    {
+      "note": "label 2: just inside the outer face",
+      "world_mm": [
+        -59.633805519740726,
+        48.95632212433916,
+        60.40397262150275
+      ],
+      "voxel": [
+        30,
+        18,
+        27
+      ],
+      "in_bounds": true,
+      "label": 2
+    },
+    {
+      "note": "label 2: just outside the outer face (background)",
+      "world_mm": [
+        -59.26253345808407,
+        48.91023996777016,
+        59.21008883692438
+      ],
+      "voxel": [
+        31,
+        18,
+        27
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "label 2: one voxel outside (background)",
+      "world_mm": [
+        -62.00858572430857,
+        43.3296187399701,
+        38.387027374617965
+      ],
+      "voxel": [
+        21,
+        10,
+        20
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "label 4: central voxel",
+      "world_mm": [
+        -88.10441499526726,
+        60.35431598287174,
+        61.70949247692892
+      ],
+      "voxel": [
+        7,
+        37,
+        27
+      ],
+      "in_bounds": true,
+      "label": 4
+    },
+    {
+      "note": "label 4: lowest corner voxel centre",
+      "world_mm": [
+        -87.93220817811687,
+        58.275508873188876,
+        55.639162517786765
+      ],
+      "voxel": [
+        5,
+        34,
+        25
+      ],
+      "in_bounds": true,
+      "label": 4
+    },
+    {
+      "note": "label 4: highest corner voxel centre",
+      "world_mm": [
+        -88.41093986503168,
+        61.58205587314458,
+        70.12665929635509
+      ],
+      "voxel": [
+        9,
+        40,
+        30
+      ],
+      "in_bounds": true,
+      "label": 4
+    },
+    {
+      "note": "label 4: off-centre inside the lowest corner voxel",
+      "world_mm": [
+        -87.45663708558618,
+        57.661087823911025,
+        56.50882849398307
+      ],
+      "voxel": [
+        5,
+        34,
+        25
+      ],
+      "in_bounds": true,
+      "label": 4
+    },
+    {
+      "note": "label 4: just inside the outer face",
+      "world_mm": [
+        -88.33493359629935,
+        61.81799641679999,
+        71.41499353364485
+      ],
+      "voxel": [
+        9,
+        40,
+        30
+      ],
+      "in_bounds": true,
+      "label": 4
+    },
+    {
+      "note": "label 4: just outside the outer face (background)",
+      "world_mm": [
+        -87.9636615346427,
+        61.771914260230986,
+        70.22110974906647
+      ],
+      "voxel": [
+        10,
+        40,
+        30
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "label 4: one voxel outside (background)",
+      "world_mm": [
+        -88.74544150609685,
+        57.93031180575905,
+        55.467434421947864
+      ],
+      "voxel": [
+        4,
+        34,
+        25
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "volume corner (background)",
+      "world_mm": [
+        -71.3,
+        42.8,
+        -15.6
+      ],
+      "voxel": [
+        0,
+        0,
+        0
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "opposite volume corner (background)",
+      "world_mm": [
+        -68.25561748042776,
+        74.89390909749025,
+        89.42348658236668
+      ],
+      "voxel": [
+        39,
+        47,
+        35
+      ],
+      "in_bounds": true,
+      "label": 0
+    },
+    {
+      "note": "outside the volume",
+      "world_mm": [
+        -76.96135252681391,
+        42.6599850567325,
+        -2.658999907936037
+      ],
+      "voxel": [
+        -3,
+        5,
+        5
+      ],
+      "in_bounds": false,
+      "label": null
+    },
+    {
+      "note": "outside the volume",
+      "world_mm": [
+        -67.74890902221219,
+        76.46684605519295,
+        98.01238149763174
+      ],
+      "voxel": [
+        42,
+        50,
+        38
+      ],
+      "in_bounds": false,
+      "label": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Model inference. Versions are the ones the study trained and evaluated with
+# (notebooks/no29_kaggle.ipynb): nnU-Net 2.8.1 on PyTorch 2.8.0.
+#
+# Install PyTorch AND torchvision FIRST, from the PyTorch index, picking the
+# build for your machine:
+#
+#   GPU (CUDA 12.6):
+#     pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu126
+#   CPU only:
+#     pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+#
+# then:
+#     pip install -c constraints.txt -r requirements-inference.txt
+#
+# torchvision must be pinned: nnU-Net depends on timm, which depends on an
+# unpinned torchvision, and pip will otherwise install the newest torchvision
+# and silently replace torch with a newer CPU-only build.
+torch==2.8.0
+torchvision==0.23.0
+nnunetv2==2.8.1
+# Skull stripping for uploads that are not already preprocessed (optional):
+#   pip install hd-bet

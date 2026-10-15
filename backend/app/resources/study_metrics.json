@@ -1,0 +1,235 @@
+{
+ "source": {
+  "repository": "https://github.com/glioma-ml-research/mu-glioma-segmentation-benchmark",
+  "commit": "23115233b151f795c949df84fa8dcb82156b4f74",
+  "files": "results/final_analysis/*.csv"
+ },
+ "model": "nnU-Net v2 3d_fullres",
+ "evaluation": "Out-of-fold predictions of five patient-grouped outer folds, one score per patient, internal validation on MU-Glioma-Post only. Overlap metrics use reference-present scans.",
+ "primary": {
+  "target": "Tumor-related region (labels 1-3)",
+  "patients": 203,
+  "mean_dice": 0.8791,
+  "ci95": [
+   0.8563,
+   0.8997
+  ],
+  "median_dice": 0.9356,
+  "iqr": [
+   0.8874,
+   0.9574
+  ],
+  "sd": 0.1582
+ },
+ "targets": [
+  {
+   "key": "label_1",
+   "name": "Non-enhancing tumor core",
+   "labels": [
+    1
+   ],
+   "patients": 145,
+   "scans": 315,
+   "dice": 0.5251,
+   "dice_ci95": [
+    0.4731,
+    0.5768
+   ],
+   "precision": 0.6774,
+   "recall": 0.6116,
+   "hd95_mm_median": 7.5236,
+   "surface_dice_1mm": 0.6116,
+   "lesion_sensitivity": 0.6824,
+   "when_absent": {
+    "absent_scans": 279,
+    "false_positive_scans": 62,
+    "false_positive_scan_rate": 0.2222,
+    "rate_ci95": [
+     0.1774,
+     0.2746
+    ],
+    "median_predicted_ml": 0.0
+   }
+  },
+  {
+   "key": "label_2",
+   "name": "FLAIR hyperintensity / edema",
+   "labels": [
+    2
+   ],
+   "patients": 202,
+   "scans": 591,
+   "dice": 0.874,
+   "dice_ci95": [
+    0.8506,
+    0.8953
+   ],
+   "precision": 0.9113,
+   "recall": 0.8912,
+   "hd95_mm_median": 1.9142,
+   "surface_dice_1mm": 0.8905,
+   "lesion_sensitivity": 0.6906,
+   "when_absent": {
+    "absent_scans": 3,
+    "false_positive_scans": 2,
+    "false_positive_scan_rate": 0.6667,
+    "rate_ci95": [
+     0.2077,
+     0.9385
+    ],
+    "median_predicted_ml": 0.031
+   }
+  },
+  {
+   "key": "label_3",
+   "name": "Enhancing tissue",
+   "labels": [
+    3
+   ],
+   "patients": 195,
+   "scans": 546,
+   "dice": 0.7963,
+   "dice_ci95": [
+    0.7637,
+    0.8266
+   ],
+   "precision": 0.85,
+   "recall": 0.8599,
+   "hd95_mm_median": 1.5,
+   "surface_dice_1mm": 0.8539,
+   "lesion_sensitivity": 0.776,
+   "when_absent": {
+    "absent_scans": 48,
+    "false_positive_scans": 25,
+    "false_positive_scan_rate": 0.5208,
+    "rate_ci95": [
+     0.3833,
+     0.6553
+    ],
+    "median_predicted_ml": 0.006
+   }
+  },
+  {
+   "key": "label_4",
+   "name": "Resection cavity",
+   "labels": [
+    4
+   ],
+   "patients": 189,
+   "scans": 520,
+   "dice": 0.6199,
+   "dice_ci95": [
+    0.5778,
+    0.6615
+   ],
+   "precision": 0.7198,
+   "recall": 0.7027,
+   "hd95_mm_median": 6.7082,
+   "surface_dice_1mm": 0.6402,
+   "lesion_sensitivity": 0.6813,
+   "when_absent": {
+    "absent_scans": 74,
+    "false_positive_scans": 43,
+    "false_positive_scan_rate": 0.5811,
+    "rate_ci95": [
+     0.4674,
+     0.6868
+    ],
+    "median_predicted_ml": 0.002
+   }
+  },
+  {
+   "key": "tumor_related_1_3",
+   "name": "Tumor-related region (1-3)",
+   "labels": [
+    1,
+    2,
+    3
+   ],
+   "patients": 203,
+   "scans": 592,
+   "dice": 0.8791,
+   "dice_ci95": [
+    0.8563,
+    0.8998
+   ],
+   "precision": 0.914,
+   "recall": 0.8939,
+   "hd95_mm_median": 2.8284,
+   "surface_dice_1mm": 0.8751,
+   "lesion_sensitivity": 0.7456,
+   "when_absent": null
+  },
+  {
+   "key": "all_postoperative_1_4",
+   "name": "All postoperative regions (1-4)",
+   "labels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "patients": 203,
+   "scans": 594,
+   "dice": 0.8982,
+   "dice_ci95": [
+    0.8757,
+    0.9185
+   ],
+   "precision": 0.9363,
+   "recall": 0.9061,
+   "hd95_mm_median": 2.0,
+   "surface_dice_1mm": 0.8777,
+   "lesion_sensitivity": 0.7787,
+   "when_absent": null
+  }
+ ],
+ "folds": [
+  {
+   "fold": 1,
+   "patients": 41,
+   "mean_dice": 0.8954,
+   "median_dice": 0.943
+  },
+  {
+   "fold": 2,
+   "patients": 41,
+   "mean_dice": 0.9002,
+   "median_dice": 0.9574
+  },
+  {
+   "fold": 3,
+   "patients": 41,
+   "mean_dice": 0.8929,
+   "median_dice": 0.9375
+  },
+  {
+   "fold": 4,
+   "patients": 40,
+   "mean_dice": 0.8346,
+   "median_dice": 0.8935
+  },
+  {
+   "fold": 5,
+   "patients": 40,
+   "mean_dice": 0.8714,
+   "median_dice": 0.9279
+  }
+ ],
+ "seed_range_fold1": 0.013,
+ "unseen_162_patients": {
+  "patients": 162,
+  "mean_dice": 0.8819,
+  "ci95": [
+   0.859,
+   0.9027
+  ]
+ },
+ "versus_residual_unet": {
+  "median_paired_difference": 0.076,
+  "ci95": [
+   0.0676,
+   0.0889
+  ]
+ }
+}

@@ -1,0 +1,17 @@
+# Python
+backend/.venv/
+__pycache__/
+.pytest_cache/
+
+# Job storage and sample data (may contain uploaded scans)
+backend/data/
+
+# Model weights are never committed
+models/*
+!models/README.md
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+.claude/

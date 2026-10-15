@@ -1,0 +1,5 @@
+# Scientific stack pinned to the versions the study used (notebooks/no29_kaggle.ipynb).
+# Use with: pip install -c constraints.txt -r requirements-inference.txt
+numpy==2.0.2
+scipy==1.14.1
+scikit-image==0.24.0

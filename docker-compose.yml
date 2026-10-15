@@ -1,0 +1,43 @@
+# CPU by default:
+#   docker compose up --build
+# With an NVIDIA GPU (needs the NVIDIA Container Toolkit):
+#   docker compose -f docker-compose.yml -f docker-compose.gpu.yml up --build
+#
+# Weights: put the model folder(s) in ./models, or set NNUNET_MODEL_DIR to a
+# host path before starting. With no weights the app runs in demo mode.
+# The app is then at http://localhost:8080
+
+services:
+  backend:
+    build:
+      context: ./backend
+      args:
+        TORCH_INDEX: ${TORCH_INDEX:-https://download.pytorch.org/whl/cpu}
+        INSTALL_INFERENCE: ${INSTALL_INFERENCE:-1}
+        INSTALL_HDBET: ${INSTALL_HDBET:-0}
+    environment:
+      NNUNET_MODEL_DIR: /models
+      GLIOMA_DATA_DIR: /data
+      NNUNET_DEVICE: ${NNUNET_DEVICE:-auto}
+      NNUNET_DISABLE_TTA: ${NNUNET_DISABLE_TTA:-0}
+      TRAINING_ORIENTATION: ${TRAINING_ORIENTATION:-LPS}
+      JOB_TTL_HOURS: ${JOB_TTL_HOURS:-24}
+    volumes:
+      - ${NNUNET_MODEL_DIR:-./models}:/models:ro
+      - glioma-data:/data
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+volumes:
+  glioma-data:
